@@ -1,5 +1,7 @@
 const addBlog = (req, res) => {
-    res.render('addBlog')
-}
+  res.render("addBlog", {
+    user: req.user,
+  });
+};
 
-module.exports = addBlog
+module.exports = addBlog;
