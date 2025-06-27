@@ -1,7 +1,7 @@
 const comment = require("../models/comments");
 
 const createComment = async (req, res) => {
-  const userComment = await comment.create({
+  await comment.create({
     content: req.body.content,
     blogId: req.params.id,
     createdBy: req.user.id,
